@@ -1,65 +1,129 @@
+import React from 'react'
+import styled from 'styled-components'
+import Carousel, {consts} from 'react-elastic-carousel'
+import Kemeja from '../products_data/kemeja'
+import Item from '../components/item'
+import Link from 'next/link'
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
 
-export default function Home() {
+
+const StyledHome = styled.div`
+   display: flex;
+   flex-direction: column;
+      .slider {
+        .rec.rec-carousel{
+         
+        }
+     
+      .category{
+      margin-left: 0;
+      text-align: center;
+      font-size: 1.75em;
+      } 
+   }
+  
+
+   @media (min-width: 426px){
+    .slider{
+
+      .category {
+        margin-left: 40px;
+        text-align: left;
+      
+      }
+    }
+  }
+  
+`
+
+const RightButton = styled.div`
+  padding: 55px 0;
+  height: 170px;
+  outline: none;
+  cursor: pointer;
+`
+
+const LeftButton = styled.div`
+  padding: 55px 0;
+  height: 170px;
+  outline: none;
+  cursor: pointer;
+`
+
+const Home = () => {
+
+  const planel = Kemeja.filter(value => value.categories.includes('planel'))
+  const polos = Kemeja.filter(value => value.categories.includes('kemeja polos'))
+  
+
+ const  myArrow =({ type, onClick, isEdge }) => {
+    const pointer = type === consts.PREV ? 
+    <LeftButton onClick={onClick} disabled={isEdge}>
+      <p>◄</p>
+    </LeftButton> 
+  
+    : 
+    <RightButton onClick={onClick} disabled={isEdge}>
+      <p>►</p>
+    </RightButton>
+   
+    
+    return (
+      <div>
+        {pointer}
+      </div>
+      
+    )
+  }
+
+  const breakPoints = [
+    { width: 1, itemsToShow: 1 },
+    { width: 355, itemsToShow: 2},
+    { width: 600, itemsToShow: 3 },
+    { width: 780, itemsToShow: 4, itemsToScroll: 2, pagination: false },
+    { width: 1000, itemsToShow: 5 },
+    { width: 1250, itemsToShow: 6, itemsToScroll: 2 },
+    { width: 1400, itemsToShow: 6 },
+    { width: 1750, itemsToShow: 7 },
+  ]
   return (
-    <div className={styles.container}>
+    <>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Geniouz Official Catalogue</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />   
       </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+      <StyledHome>  
+        <div className="slider">
+          <h1 className="category">Flannel Shirt </h1>
+          <Carousel  renderArrow={myArrow} breakPoints={breakPoints} pagination={false} itemPadding={[5,5]}>
+          {planel.map(value => { 
+                return (
+                  <Link href={`/products/${value.code}`} key={value.code} passHref>
+                  <a><Item  image={value.image} name={value.name} price={value.price}/></a>
+                  </Link>
+                )
+              })
+          }
+          </Carousel>
+        </div> 
+        <div className="slider">
+          <h1 className="category">Plain Shirt </h1>
+          <Carousel  renderArrow={myArrow} breakPoints={breakPoints} pagination={false} itemPadding={[5,5]}>
+          {polos.map(value => { 
+                return (
+                  <Link href={`/products/${value.code}`} key={value.code} passHref>
+                  <a><Item  image={value.image} name={value.name} price={value.price}/></a>
+                  </Link>
+                )
+              })
+          }
+          </Carousel>
+        </div> 
+        
+      </StyledHome>
+    </>
   )
 }
+
+export default Home
