@@ -16,6 +16,7 @@ const Nav = styled.nav`
   
   .logo {
     padding: 20px 0;
+    margin-left:20px;
   
   }
 `

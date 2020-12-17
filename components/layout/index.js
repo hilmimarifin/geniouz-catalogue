@@ -8,17 +8,14 @@ const StyledLayout = styled.div`
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-   
     width: 100vw;
  
     header {
       
     }
-    content {
-        flex-grow: 10;
-        max-width: 100vw;
-        box-sizing: border-box;
-    }
+    .content {
+        flex-grow: 2;
+        }
     footer {
         width: 100%;
         font-size: 0.9em;
@@ -40,9 +37,9 @@ const Layout = ({children, title}) => {
                 <header>
                     <Navbar/>
                 </header>
-                <content>
+                <div className="content">
                     {children}
-                </content>
+                </div>
 
 
                 <footer>&#169; 2021 Geniouz official</footer>

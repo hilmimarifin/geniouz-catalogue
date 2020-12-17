@@ -19,6 +19,7 @@ const StyledHome = styled.div`
       margin-left: 0;
       text-align: center;
       font-size: 1.75em;
+      margin-bottom: 0;
       } 
    }
   
@@ -39,14 +40,17 @@ const StyledHome = styled.div`
 const RightButton = styled.div`
   padding: 55px 0;
   height: 170px;
-  outline: none;
+  width: 40px;
+  font-size: 20px;
+  text-align: right;
   cursor: pointer;
 `
 
 const LeftButton = styled.div`
   padding: 55px 0;
   height: 170px;
-  outline: none;
+  width: 40px;
+  font-size: 20px;
   cursor: pointer;
 `
 
