@@ -55,12 +55,15 @@ const Products = ({products}) => {
                                 {product.size.map(value => { return <span key={value} className="sizeBox">{value}</span>}) }
                             </div>
                         </div>
-                        <div className="socmed">
-                            <a className="socmedItem" href="https://shopee.co.id/geniouz.official" target="_blank">Shopee</a>
-                            <a  className="socmedItem" href={`https://api.whatsapp.com/send?phone=6283844982006&text=Saya%20tertarik%20untuk%20membeli%20${product.name}`} target="_blank">
-                                Whatsapp
-                            </a>
-                            <div className="socmedItem">Tokped</div>
+                        <div className="order">
+                            <h3>Order by</h3>
+                            <div className="socmed">
+                                <a className="socmedItem" href="https://shopee.co.id/geniouz.official" target="_blank">Shopee</a>
+                                <a  className="socmedItem" href={`https://api.whatsapp.com/send?phone=6283844982006&text=Saya%20tertarik%20untuk%20membeli%20${product.name}`} target="_blank">
+                                    Whatsapp
+                                </a>
+                                <div className="socmedItem">Tokped</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -126,7 +129,7 @@ const Products = ({products}) => {
                 .sizeProduct {
                     margin-top: 40px;
                     h3 {
-                        margin: 4px;
+                        margin: 10px;
                     }
                     .sizeBoxes{
                         display: flex;
@@ -142,18 +145,25 @@ const Products = ({products}) => {
                         }
                     }
                 }
-                .socmed {
-                    display: flex;
-                    flex-direction: row;
-                    margin-top: 30px;
-                    background-color: black;
-                    color: white;
-                    height: 35px;
-                    .socmedItem{
-                        flex: 1;
-                        justify-content: center;
-                        align-items: center;
-                        padding: 7px 0;
+                .order {
+                    margin-top: 50px;
+                    h3{
+                        margin-bottom: 0;
+                    }
+
+                    .socmed {
+                        display: flex;
+                        flex-direction: row;
+                        margin-top: 10px;
+                        background-color: black;
+                        color: white;
+                        height: 35px;
+                        .socmedItem{
+                            flex: 1;
+                            justify-content: center;
+                            align-items: center;
+                            padding: 7px 0;
+                        }
                     }
                 }
             }
@@ -190,7 +200,8 @@ const Products = ({products}) => {
                 margin-top: 40px;
                 .image {
                     border-style: solid;
-                    height: 388px;
+                    width: 400px;
+                    height: 445px;
                     padding-top: 30px;
                 }
                 .description{

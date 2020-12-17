@@ -12,12 +12,20 @@ const Nav = styled.nav`
   padding: 0 20px;
   display: flex;
   justify-content: space-between;
-  
-  
+  position: fixed;
+  top:0;
+  z-index:20;
+
   .logo {
+    align-items: center;
+    justify-content: center;
     padding: 20px 0;
-    margin-left:20px;
-  
+    margin: 0 auto;
+
+    @media (min-width: 768px){
+      padding: 20px 0;
+      margin-left:20px;
+    }
   }
 `
 

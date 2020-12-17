@@ -15,6 +15,7 @@ const StyledLayout = styled.div`
     }
     .content {
         flex-grow: 2;
+        margin-top: 90px;
         }
     footer {
         width: 100%;
