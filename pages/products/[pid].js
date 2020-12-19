@@ -33,6 +33,8 @@ const Products = ({products}) => {
                 <title>Geniouz | {product.name}</title>
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />   
+                <meta name="description" content={` Produk ${product.name} dibuat dengan menggunakan 100% bahan cotton dengan jahitan yang rapi. Kemeja klasik untuk segala acara. Regular-fit, motif plaid dan checkered penuh gaya untuk tampilan kasual`} />
+                <meta name="keywords" content="kemeja, fashion, outfit, atasan, bawahan, jaket, jeans, celana, bandung, jawa barat, indonesia, geniouz, busana, outwear, jual" />
             </Head>
             <StyledProducts>
                 <div className="firstBlock">
