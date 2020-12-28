@@ -8,9 +8,9 @@ const Ul = styled.ul`
   flex-flow: row nowrap;
   font-size: 1.1em;
   letter-spacing: 1px;
-  cursor: pointer;
   z-index: 20;
   li {
+    cursor: pointer;
     padding: 18px 10px;
     color: white;
   }

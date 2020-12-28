@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Carousel, {consts} from 'react-elastic-carousel'
 import Kemeja from '../products_data/kemeja'
+import Baju_Muslim from '../products_data/baju_muslim'
 import Item from '../components/item'
 import Link from 'next/link'
 import Head from 'next/head'
@@ -58,6 +59,7 @@ const Home = () => {
 
   const planel = Kemeja.filter(value => value.categories.includes('planel'))
   const polos = Kemeja.filter(value => value.categories.includes('kemeja polos'))
+  const baju_muslim = Baju_Muslim
   
 
  const  myArrow =({ type, onClick, isEdge }) => {
@@ -116,14 +118,27 @@ const Home = () => {
         <div className="slider">
           <h1 className="category">Plain Shirt </h1>
           <Carousel  renderArrow={myArrow} breakPoints={breakPoints} pagination={false} itemPadding={[5,5]}>
-          {polos.map(value => { 
-                return (
-                  <Link href={`/products/${value.code}`} key={value.code} passHref>
-                  <a><Item  image={value.image} name={value.name} price={value.price}/></a>
-                  </Link>
-                )
-              })
-          }
+              {polos.map(value => { 
+                    return (
+                      <Link href={`/products/${value.code}`} key={value.code} passHref>
+                      <a><Item  image={value.image} name={value.name} price={value.price}/></a>
+                      </Link>
+                    )
+                  })
+              }
+          </Carousel>
+        </div> 
+        <div className="slider">
+          <h1 className="category">Muslim Dress </h1>
+          <Carousel  renderArrow={myArrow} breakPoints={breakPoints} pagination={false} itemPadding={[5,5]}>
+              {baju_muslim.map(value => { 
+                    return (
+                      <Link href={`/products/${value.code}`} key={value.code} passHref>
+                      <a><Item  image={value.image} name={value.name} price={value.price}/></a>
+                      </Link>
+                    )
+                  })
+              }
           </Carousel>
         </div> 
         

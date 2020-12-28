@@ -2,20 +2,25 @@ import React from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
-import Products_data from '../../products_data/kemeja'
+import Kemeja_data from '../../products_data/kemeja'
+import Muslim_data from '../../products_data/baju_muslim'
 import Head from 'next/head'
 
     export async function getStaticPaths() {
-        const res = await Products_data
-        const paths = res.map((products) => `/products/${products.code}`)
+        const kemeja = await Kemeja_data
+        const muslim = await Muslim_data
+        const allProducts = kemeja.concat(muslim)
+        const paths = allProducts.map((products) => `/products/${products.code}`)
     
         return { paths, fallback: false }
     }
 
     export async function getStaticProps() {
 
-    const res = await Products_data
-    const products = await res
+    const kemeja = await Kemeja_data
+    const muslim =  await Muslim_data
+    const products = kemeja.concat(muslim)
+    
   
     return { props: { products } }
     }
@@ -140,7 +145,7 @@ const Products = ({products}) => {
                         justify-content: center;
                         .sizeBox{
                             width: 40px;
-                            height: 40px;
+                            
                             border-style: solid;
                             margin: 0 10px;
                             padding: 8px 0;

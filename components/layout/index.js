@@ -8,10 +8,9 @@ const StyledLayout = styled.div`
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    width: 100vw;
- 
+
     header {
-      
+
     }
     .content {
         flex-grow: 2;
@@ -23,7 +22,7 @@ const StyledLayout = styled.div`
         color: white;
         height: 40px;
         background-color: black;
-       
+
         padding: 10px;
         text-align: center;
     }
