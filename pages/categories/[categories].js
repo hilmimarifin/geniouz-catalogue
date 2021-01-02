@@ -51,7 +51,7 @@ const Categories = () => {
             flex-flow: row wrap;
             justify-content: center;
             a {
-                margin: 0 8px
+                margin: 0px
             }
         }
 
