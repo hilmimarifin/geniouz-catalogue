@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Carousel, {consts} from 'react-elastic-carousel'
-import Kemeja from '../products_data/kemeja'
+import Kemeja from '../products_data/products'
 import Baju_Muslim from '../products_data/baju_muslim'
 import Item from '../components/item'
 import Link from 'next/link'
@@ -12,17 +12,18 @@ const StyledHome = styled.div`
    display: flex;
    flex-direction: column;
       .slider {
-        .rec.rec-carousel{
-         
+        h1{
+          text-transform: capitalize;
         }
+      
      
-      .category{
-      margin-left: 0;
-      text-align: center;
-      font-size: 1.75em;
-      margin-bottom: 0;
-      } 
-   }
+        .category{
+        margin-left: 0;
+        text-align: center;
+        font-size: 1.75em;
+        margin-bottom: 0;
+        } 
+      }
   
 
    @media (min-width: 426px){
@@ -57,9 +58,29 @@ const LeftButton = styled.div`
 
 const Home = () => {
 
-  const planel = Kemeja.filter(value => value.categories.includes('planel'))
-  const polos = Kemeja.filter(value => value.categories.includes('kemeja polos'))
-  const baju_muslim = Baju_Muslim
+  
+  return (
+    <>
+      <Head>
+        <title>Geniouz Official Catalogue</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="Distro pakaian berkualitas dengan harga terjangkau berlokasi di Pasar Baru Banduung. Geniouz menjual berbagai macam variasi outwear seperti kemeja, kaos, jaket, dan berbagai jenis busana lainnya yang disesuaikan dengan trend fashion kekinian"/> 
+        <meta name="keywords" content="kemeja, fashion, outfit, atasan, bawahan, jaket, jeans, celana, bandung, jawa barat, indonesia, geniouz, busana, outwear, jual " />  
+      </Head>
+      <StyledHome>  
+        <Slider categories="Flannel" />
+        <Slider categories="kemeja polos"/>
+        <Slider categories="baju muslim"/>
+      </StyledHome>
+    </>
+  )
+}
+
+const Slider = ({categories, title}) => {
+  const products = Kemeja.filter(value => value.categories.includes(categories))
+  // const polos = Kemeja.filter(value => value.categories.includes('kemeja polos'))
+  // const baju_muslim = Baju_Muslim
   
 
  const  myArrow =({ type, onClick, isEdge }) => {
@@ -92,20 +113,13 @@ const Home = () => {
     { width: 1400, itemsToShow: 6 },
     { width: 1750, itemsToShow: 7 },
   ]
-  return (
-    <>
-      <Head>
-        <title>Geniouz Official Catalogue</title>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="description" content="Distro pakaian berkualitas dengan harga terjangkau berlokasi di Pasar Baru Banduung. Geniouz menjual berbagai macam variasi outwear seperti kemeja, kaos, jaket, dan berbagai jenis busana lainnya yang disesuaikan dengan trend fashion kekinian"/> 
-        <meta name="keywords" content="kemeja, fashion, outfit, atasan, bawahan, jaket, jeans, celana, bandung, jawa barat, indonesia, geniouz, busana, outwear, jual " />  
-      </Head>
-      <StyledHome>  
-        <div className="slider">
-          <h1 className="category">Flannel Shirt </h1>
+  return(
+    <div className="slider">
+          <Link href={`/categories/${categories}`}>
+            <h1 className="category">{categories} </h1>
+          </Link>
           <Carousel  renderArrow={myArrow} breakPoints={breakPoints} pagination={false} itemPadding={[5,5]}>
-          {planel.map(value => { 
+          {products.map(value => { 
                 return (
                   <Link href={`/products/${value.code}`} key={value.code} passHref>
                   <a><Item  image={value.image} name={value.name} price={value.price}/></a>
@@ -114,36 +128,7 @@ const Home = () => {
               })
           }
           </Carousel>
-        </div> 
-        <div className="slider">
-          <h1 className="category">Plain Shirt </h1>
-          <Carousel  renderArrow={myArrow} breakPoints={breakPoints} pagination={false} itemPadding={[5,5]}>
-              {polos.map(value => { 
-                    return (
-                      <Link href={`/products/${value.code}`} key={value.code} passHref>
-                      <a><Item  image={value.image} name={value.name} price={value.price}/></a>
-                      </Link>
-                    )
-                  })
-              }
-          </Carousel>
-        </div> 
-        <div className="slider">
-          <h1 className="category">Muslim Dress </h1>
-          <Carousel  renderArrow={myArrow} breakPoints={breakPoints} pagination={false} itemPadding={[5,5]}>
-              {baju_muslim.map(value => { 
-                    return (
-                      <Link href={`/products/${value.code}`} key={value.code} passHref>
-                      <a><Item  image={value.image} name={value.name} price={value.price}/></a>
-                      </Link>
-                    )
-                  })
-              }
-          </Carousel>
-        </div> 
-        
-      </StyledHome>
-    </>
+      </div> 
   )
 }
 

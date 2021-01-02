@@ -177,7 +177,7 @@ const  Kemeja = [
         description: null,
         price : 120000,
         image : '/images/products/AA211.Kemeja Salur Planel T.Panjang 2.jpeg',
-        categories: ['kemeja', 'casual', 'planel']
+        categories: ['kemeja', 'casual', 'Flannel']
     },
     { 
         name : 'Flannel Alpha',
@@ -187,7 +187,7 @@ const  Kemeja = [
         description: null,
         price : 120000,
         image : '/images/products/AA212.Kemeja Salur Planel T.Panjang 2.jpeg',
-        categories: ['kemeja', 'casual', 'planel']
+        categories: ['kemeja', 'casual', 'Flannel']
     },
     { 
         name : 'Flannel Betha',
@@ -197,7 +197,7 @@ const  Kemeja = [
         description: null,
         price : 120000,
         image : '/images/products/AA213.Kemeja Salur Planel T.Panjang 2.jpeg',
-        categories: ['kemeja', 'casual', 'planel']
+        categories: ['kemeja', 'casual', 'Flannel']
     },
     { 
         name : 'Flannel Gama',
@@ -207,7 +207,7 @@ const  Kemeja = [
         description: null,
         price : 120000,
         image : '/images/products/AA214.Kemeja Salur Planel T.Panjang 2.jpeg',
-        categories: ['kemeja', 'casual', 'planel']
+        categories: ['kemeja', 'casual', 'Flannel']
     },
     { 
         name : 'Flannel Teta',
@@ -217,7 +217,7 @@ const  Kemeja = [
         description: null,
         price : 120000,
         image : '/images/products/AA215.Kemeja Salur Planel T.Panjang 2.jpeg',
-        categories: ['kemeja', 'casual', 'planel']
+        categories: ['kemeja', 'casual', 'Flannel']
     },
     { 
         name : 'Flannel Zeta',
@@ -227,7 +227,47 @@ const  Kemeja = [
         description: null,
         price : 120000,
         image : '/images/products/AA216.Kemeja Salur Planel T.Panjang 2.jpeg',
-        categories: ['kemeja', 'casual', 'planel']
+        categories: ['kemeja', 'casual', 'Flannel']
+    },
+    { 
+        name : 'White Kurta',
+        matterial: 'katun',
+        code : 'AA261',
+        size: ['All size'],
+        description: null,
+        price : 130000,
+        image : '/images/products/AA261.Gamis Kurta.jpeg',
+        categories: ['atasan','baju muslim','gamis']
+    },
+    { 
+        name : 'Red Kurta',
+        matterial: 'katun',
+        code : 'AA262',
+        size: ['All size'],
+        description: null,
+        price : 130000,
+        image : '/images/products/AA262.Gamis Kurta 2.jpeg',
+        categories: ['atasan','baju muslim','gamis']
+    },
+    { 
+        name : 'Blue Kurta',
+        matterial: 'katun',
+        code : 'AA263',
+        size: ['All size'],
+        description: null,
+        price : 130000,
+        image : '/images/products/AA263.Gamis Kurta 3.jpeg',
+        categories: ['atasan','baju muslim','gamis']
+    },
+    { 
+        name : 'Grey Kurta',
+        matterial: 'katun',
+        code : 'AA264',
+        size: ['All size'],
+        description: null,
+        price : 130000,
+        image : '/images/products/AA264.Gamis Kurta 4.jpeg',
+        categories: ['atasan','baju muslim','gamis']
     }
     
 ]
