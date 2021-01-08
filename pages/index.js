@@ -64,6 +64,7 @@ const Home = () => {
       <Head>
         <title>Geniouz Official Catalogue</title>
         <meta charSet="utf-8" />
+        <meta name="google-site-verification" content="n6yFX14iuBsigvoeOr02djtqlpXDzX7vadfm4O1lVqE" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content="Distro pakaian berkualitas dengan harga terjangkau berlokasi di Pasar Baru Banduung. Geniouz menjual berbagai macam variasi outwear seperti kemeja, kaos, jaket, dan berbagai jenis busana lainnya yang disesuaikan dengan trend fashion kekinian"/> 
         <meta name="keywords" content="kemeja, fashion, outfit, atasan, bawahan, jaket, jeans, celana, bandung, jawa barat, indonesia, geniouz, busana, outwear, jual " />  
