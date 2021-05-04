@@ -75,9 +75,9 @@ const Home = () => {
         <Banner image="/images/banner/banner flannel.jpg" categories="Flannel"/>
         <Banner image="/images/banner/banner kemeja polos.jpg" categories="kemeja polos"/>
         <Banner image="/images/banner/Banner Muslim.jpg" categories="baju muslim"/>
-        <Slider categories="Flannel" />
+        {/* <Slider categories="Flannel" />
         <Slider categories="kemeja polos"/>
-        <Slider categories="baju muslim"/>
+        <Slider categories="baju muslim"/> */}
       </StyledHome>
     </>
   )
@@ -85,9 +85,7 @@ const Home = () => {
 
 const Slider = ({categories, title}) => {
   const products = Kemeja.filter(value => value.categories.includes(categories))
-  // const polos = Kemeja.filter(value => value.categories.includes('kemeja polos'))
-  // const baju_muslim = Baju_Muslim
-  
+
 
  const  myArrow =({ type, onClick, isEdge }) => {
     const pointer = type === consts.PREV ? 
