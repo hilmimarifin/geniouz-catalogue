@@ -6,6 +6,7 @@ import Baju_Muslim from '../products_data/baju_muslim'
 import Item from '../components/item'
 import Link from 'next/link'
 import Head from 'next/head'
+import Banner from '../components/banner'
 
 
 const StyledHome = styled.div`
@@ -56,6 +57,7 @@ const LeftButton = styled.div`
   cursor: pointer;
 `
 
+
 const Home = () => {
 
   
@@ -70,6 +72,9 @@ const Home = () => {
         <meta name="keywords" content="kemeja, fashion, outfit, atasan, bawahan, jaket, jeans, celana, bandung, jawa barat, indonesia, geniouz, busana, outwear, jual " />  
       </Head>
       <StyledHome>  
+        <Banner image="/images/banner/banner flannel.jpg" categories="Flannel"/>
+        <Banner image="/images/banner/banner kemeja polos.jpg" categories="kemeja polos"/>
+        <Banner image="/images/banner/Banner Muslim.jpg" categories="baju muslim"/>
         <Slider categories="Flannel" />
         <Slider categories="kemeja polos"/>
         <Slider categories="baju muslim"/>

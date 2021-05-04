@@ -46,6 +46,7 @@ const Item = ({image,name,price}) => {
           src={image} width="190" 
           height="190" 
           layout="fixed"
+          quality="100"
         ></Image>
         <div className="description">
             <h3 className="title"> {name} </h3>
