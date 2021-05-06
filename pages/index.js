@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import Carousel, {consts} from 'react-elastic-carousel'
 import Kemeja from '../products_data/products'
@@ -7,6 +7,9 @@ import Item from '../components/item'
 import Link from 'next/link'
 import Head from 'next/head'
 import Banner from '../components/banner'
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+
 
 
 const StyledHome = styled.div`
@@ -28,6 +31,8 @@ const StyledHome = styled.div`
   
 
    @media (min-width: 426px){
+     display: flex;
+     flex-direction: row;
     .slider{
 
       .category {
@@ -59,7 +64,9 @@ const LeftButton = styled.div`
 
 
 const Home = () => {
-
+  useEffect(() => {
+    AOS.init()
+  }, [])
   
   return (
     <>
@@ -72,9 +79,27 @@ const Home = () => {
         <meta name="keywords" content="kemeja, fashion, outfit, atasan, bawahan, jaket, jeans, celana, bandung, jawa barat, indonesia, geniouz, busana, outwear, jual " />  
       </Head>
       <StyledHome>  
-        <Banner image="/images/banner/banner flannel.jpg" categories="Flannel"/>
-        <Banner image="/images/banner/banner kemeja polos.jpg" categories="kemeja polos"/>
-        <Banner image="/images/banner/Banner Muslim.jpg" categories="baju muslim"/>
+        <Banner image="/images/banner/banner flannel.jpg"
+                categories="Flannel"
+                bannerTitle="Flanel Shirt"
+                postionX={225}
+                postionY={140}
+                aos="fade-right"
+        />
+        <Banner image="/images/banner/banner kemeja polos.jpg"
+                categories="kemeja polos"
+                bannerTitle="Casual Shirt"
+                postionX={35}
+                postionY={140}
+                aos="fade-left"
+        />
+        <Banner image="/images/banner/Banner Muslim.jpg"
+                categories="baju muslim"
+                bannerTitle="Muslim Shirt"
+                postionX={225}
+                postionY={140}
+                aos="fade-right"
+        />
         {/* <Slider categories="Flannel" />
         <Slider categories="kemeja polos"/>
         <Slider categories="baju muslim"/> */}

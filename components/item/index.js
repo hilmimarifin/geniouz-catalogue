@@ -1,6 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
 import styled from 'styled-components'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 
 const StyledItem = styled.div`
   display: flex;
@@ -38,6 +41,7 @@ const StyledItem = styled.div`
   
   `
 const Item = ({image,name,price}) => {
+  AOS.init()
   return(
     <StyledItem>
      
@@ -47,6 +51,7 @@ const Item = ({image,name,price}) => {
           height="190" 
           layout="fixed"
           quality="100"
+          data-aos="fade-up"
         ></Image>
         <div className="description">
             <h3 className="title"> {name} </h3>

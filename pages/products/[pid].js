@@ -1,27 +1,33 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import Products_data from '../../products_data/products'
 import Muslim_data from '../../products_data/baju_muslim'
 import Head from 'next/head'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 
     export async function getStaticPaths() {
         const products = await Products_data
         const paths = products.map((products) => `/products/${products.code}`)
-    
         return { paths, fallback: false }
     }
 
     export async function getStaticProps() {
 
     const products = await Products_data
+   
     
   
     return { props: { products } }
     }
 
 const Products = ({products}) => {
+    useEffect(() => {
+        AOS.init()
+      }, [])
     const router = useRouter()
     const { pid } = router.query
     const product0 =  products
@@ -39,7 +45,7 @@ const Products = ({products}) => {
             </Head>
             <StyledProducts>
                 <div className="firstBlock">
-                    <div  className="image">
+                    <div  className="image" data-aos="fade-up">
                         <Image        
                             src={product.image}
                             width= "330"
@@ -70,7 +76,7 @@ const Products = ({products}) => {
                         </div>
                     </div>
                 </div>
-                <div className="detail">
+                <div className="detail" data-aos="fade-up">
                     <div className="title">Detail</div>
                     <p className="desc">
                         {product.name} dibuat dengan menggunakan 100% bahan cotton dengan jahitan yang rapi. Kemeja klasik untuk segala acara. Regular-fit, motif plaid dan checkered penuh gaya untuk tampilan kasual.<br></br><br></br>
