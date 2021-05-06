@@ -41,7 +41,10 @@ const StyledItem = styled.div`
   
   `
 const Item = ({image,name,price}) => {
-  AOS.init()
+  AOS.init({
+    once : true,
+    
+  })
   return(
     <StyledItem>
      

@@ -1,7 +1,9 @@
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect } from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 
 
@@ -27,6 +29,11 @@ const StyledImage = styled.div`
 `
 
 const Banner = ({image, categories, bannerTitle, postionX, postionY, aos}) => {
+    useEffect(() => {
+        AOS.init({
+          offset: 80
+        })
+      }, [])
     return (
         <div>
             <Link href={`/categories/${categories}`}>
