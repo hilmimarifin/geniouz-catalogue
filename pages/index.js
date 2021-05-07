@@ -83,8 +83,8 @@ const Home = () => {
         <meta property="og:url" content="https://geniouz.id/"/>
         <meta property="og:title" content="Tempatnya Outfit Berkualitas dan Terjangkau | Geniouz"/>
         <meta property="og:description" content="Distro pakaian berkualitas dengan harga terjangkau berlokasi di Pasar Baru Banduung. Geniouz menjual berbagai macam variasi outwear seperti kemeja, kaos, jaket, dan berbagai jenis busana lainnya yang disesuaikan dengan trend fashion kekinian"/>
-        <meta property="og:image" content="/images/thumbnail.png"/>
-        <meta property="twitter:card" content="/images/thumbnail.png"/>
+        <meta property="og:image" content="/images/twitter.jpg"/>
+        <meta property="twitter:card" content="summary_large_image"/>
         <meta property="twitter:url" content="https://geniouz.id/"/>
         <meta property="twitter:title" content="Geniouz | Tempatnya Outfit Berkualitas dan Terjangkau"/>        
         <meta property="og:type" content="website"/>
