@@ -47,12 +47,12 @@ const Products = ({products}) => {
                 <meta property="og:title" content={`Geniouz | ${product.name}`}/>
                 <meta property="og:description" content={`Produk ${product.name} dibuat dengan menggunakan 100% bahan cotton dengan jahitan yang rapi. Kemeja klasik untuk segala acara. Regular-fit, motif plaid dan checkered penuh gaya untuk tampilan kasual`}/>
                 <meta property="og:image" content="/images/thumbnail.png"/>
-                <meta property="twitter:card" content="/images/thumbnail.png"/>
+                <meta property="twitter:card" content="summary_large_image"/>
                 <meta property="twitter:url" content="https://geniouz.id/"/>
                 <meta property="twitter:title" content={`Geniouz | ${product.name}`}/>        
                 <meta property="og:type" content="website"/>
                 <meta property="twitter:description" content={`Produk ${product.name} dibuat dengan menggunakan 100% bahan cotton dengan jahitan yang rapi. Kemeja klasik untuk segala acara. Regular-fit, motif plaid dan checkered penuh gaya untuk tampilan kasual`}/>
-                <meta property="twitter:image" content="/images/thumbnail.png"/>
+                <meta property="twitter:image" content={`${product.image}`}/>
             </Head>
             <StyledProducts>
                 <div className="firstBlock">
