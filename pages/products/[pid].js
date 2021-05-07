@@ -7,7 +7,7 @@ import Muslim_data from '../../products_data/baju_muslim'
 import Head from 'next/head'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import {} from '../../public/images/products'
+
 
 
     export async function getStaticPaths() {
