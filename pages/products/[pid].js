@@ -40,8 +40,19 @@ const Products = ({products}) => {
                 <title>Geniouz | {product.name}</title>
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />   
-                <meta name="description" content={` Produk ${product.name} dibuat dengan menggunakan 100% bahan cotton dengan jahitan yang rapi. Kemeja klasik untuk segala acara. Regular-fit, motif plaid dan checkered penuh gaya untuk tampilan kasual`} />
+                <meta name="description" content={`Produk ${product.name} dibuat dengan menggunakan 100% bahan cotton dengan jahitan yang rapi. Kemeja klasik untuk segala acara. Regular-fit, motif plaid dan checkered penuh gaya untuk tampilan kasual`} />
                 <meta name="keywords" content="kemeja, fashion, outfit, atasan, bawahan, jaket, jeans, celana, bandung, jawa barat, indonesia, geniouz, busana, outwear, jual" />
+
+                <meta property="og:url" content="https://geniouz.id/"/>
+                <meta property="og:title" content={`Geniouz | ${product.name}`}/>
+                <meta property="og:description" content={`Produk ${product.name} dibuat dengan menggunakan 100% bahan cotton dengan jahitan yang rapi. Kemeja klasik untuk segala acara. Regular-fit, motif plaid dan checkered penuh gaya untuk tampilan kasual`}/>
+                <meta property="og:image" content="/images/thumbnail.png"/>
+                <meta property="twitter:card" content="/images/thumbnail.png"/>
+                <meta property="twitter:url" content="https://geniouz.id/"/>
+                <meta property="twitter:title" content={`Geniouz | ${product.name}`}/>        
+                <meta property="og:type" content="website"/>
+                <meta property="twitter:description" content={`Produk ${product.name} dibuat dengan menggunakan 100% bahan cotton dengan jahitan yang rapi. Kemeja klasik untuk segala acara. Regular-fit, motif plaid dan checkered penuh gaya untuk tampilan kasual`}/>
+                <meta property="twitter:image" content="/images/thumbnail.png"/>
             </Head>
             <StyledProducts>
                 <div className="firstBlock">
