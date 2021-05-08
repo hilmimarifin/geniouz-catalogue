@@ -83,14 +83,12 @@ const Home = () => {
         <meta property="og:title" content="Tempatnya Outfit Berkualitas dan Terjangkau | Geniouz"/>
         <meta property="og:description" content="Distro pakaian berkualitas dengan harga terjangkau berlokasi di Pasar Baru Banduung. Geniouz menjual berbagai macam variasi outwear seperti kemeja, kaos, jaket, dan berbagai jenis busana lainnya yang disesuaikan dengan trend fashion kekinian"/>
         <meta property="og:image" content="/images/thumbnail polos.jpg"/>
-        <meta property="twitter:card" content="summary_large_image"/>
-        <meta property="twitter:url" content="https://geniouz.id/"/>
-        <meta property="twitter:title" content="Geniouz | Tempatnya Outfit Berkualitas dan Terjangkau"/>        
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:url" content="https://geniouz.id/"/>
+        <meta name="twitter:title" content="Geniouz | Tempatnya Outfit Berkualitas dan Terjangkau"/>        
         <meta property="og:type" content="website"/>
-        <meta property="twitter:description" content="Distro pakaian berkualitas dengan harga terjangkau berlokasi di Pasar Baru Banduung. Geniouz menjual berbagai macam variasi outwear seperti kemeja, kaos, jaket, dan berbagai jenis busana lainnya yang disesuaikan dengan trend fashion kekinian"/>
-        <meta property="twitter:image" content="/images/thumbnail polos.jpg"/>
-
-      
+        <meta name="twitter:description" content="Distro pakaian berkualitas dengan harga terjangkau berlokasi di Pasar Baru Banduung. Geniouz menjual berbagai macam variasi outwear seperti kemeja, kaos, jaket, dan berbagai jenis busana lainnya yang disesuaikan dengan trend fashion kekinian"/>
+        <meta name="twitter:image" content="/images/thumbnail polos.jpg" />
       </Head>
       <StyledHome>  
         <Banner image="/images/banner/banner flannel.jpg"
