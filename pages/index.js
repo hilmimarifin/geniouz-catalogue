@@ -88,7 +88,7 @@ const Home = () => {
         <meta name="twitter:title" content="Geniouz | Tempatnya Outfit Berkualitas dan Terjangkau"/>        
         <meta property="og:type" content="website"/>
         <meta name="twitter:description" content="Distro pakaian berkualitas dengan harga terjangkau berlokasi di Pasar Baru Banduung. Geniouz menjual berbagai macam variasi outwear seperti kemeja, kaos, jaket, dan berbagai jenis busana lainnya yang disesuaikan dengan trend fashion kekinian"/>
-        <meta name="twitter:image" content="/images/thumbnail polos.jpg?1233456342" />
+        <meta name="twitter:image" content="/images/thumbnail polos.jpg?12334563442"></meta> 
         <meta name="twitter:site" content="@ozhilmi"/>
         <meta name="twitter:site:id" content="@ozhilmi"/>
       </Head>
