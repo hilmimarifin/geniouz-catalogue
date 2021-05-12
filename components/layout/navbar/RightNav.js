@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link'
 
@@ -31,12 +31,12 @@ const Ul = styled.ul`
   }
 `;
 
-const RightNav = ({ open }) => {
+const RightNav = ({ open, clicked }) => {
+ 
   return (
     <Ul open={open}>
-      <Link href="/panduan" passHref><li>Panduan</li></Link>
-      <Link href="/kontak" passHref><li>Kontak</li></Link>
-
+      <Link href="/panduan" passHref><li onClick={clicked}>Panduan</li></Link>
+      <Link href="/kontak" passHref><li onClick={clicked}>Kontak</li></Link>
     </Ul>
   )
 }
